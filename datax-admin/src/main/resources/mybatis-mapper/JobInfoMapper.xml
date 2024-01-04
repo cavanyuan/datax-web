@@ -108,6 +108,9 @@
             <if test="triggerStatus gte 0">
                 AND t.trigger_status = #{triggerStatus}
             </if>
+		    <if test="lastHandleCode gte 0">
+                AND t.last_handle_code = #{lastHandleCode}
+            </if>
 			<if test="jobDesc != null and jobDesc != ''">
 				AND t.job_desc like CONCAT(CONCAT('%', #{jobDesc}), '%')
 			</if>
@@ -145,6 +148,9 @@
             <if test="triggerStatus gte 0">
                 AND t.trigger_status = #{triggerStatus}
             </if>
+			<if test="lastHandleCode gte 0">
+				AND t.last_handle_code = #{lastHandleCode}
+			</if>
 			<if test="jobDesc != null and jobDesc != ''">
 				AND t.job_desc like CONCAT(CONCAT('%', #{jobDesc}), '%')
 			</if>

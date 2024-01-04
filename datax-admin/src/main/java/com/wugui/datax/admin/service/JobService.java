@@ -28,7 +28,7 @@ public interface JobService {
      * @param userId
      * @return
      */
-    Map<String, Object> pageList(int start, int length, int jobGroup, int triggerStatus, String jobDesc, String glueType, int userId,Integer[] projectIds);
+    Map<String, Object> pageList(int start, int length, int jobGroup, int triggerStatus, String jobDesc, String glueType, int userId,Integer[] projectIds, int lastHandleCode);
 
     List<JobInfo> list();
 

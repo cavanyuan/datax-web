@@ -23,7 +23,7 @@ public interface JobInfoMapper {
                            @Param("jobDesc") String jobDesc,
                            @Param("glueType") String glueType,
                            @Param("userId") int userId,
-                           @Param("projectIds") Integer[] projectIds);
+                           @Param("projectIds") Integer[] projectIds, @Param("lastHandleCode") int lastHandleCode);
 
     int pageListCount(@Param("offset") int offset,
                       @Param("pagesize") int pagesize,
@@ -32,7 +32,7 @@ public interface JobInfoMapper {
                       @Param("jobDesc") String jobDesc,
                       @Param("glueType") String glueType,
                       @Param("userId") int userId,
-                      @Param("projectIds") Integer[] projectIds);
+                      @Param("projectIds") Integer[] projectIds, @Param("lastHandleCode") int lastHandleCode);
 
     List<JobInfo> findAll();
 

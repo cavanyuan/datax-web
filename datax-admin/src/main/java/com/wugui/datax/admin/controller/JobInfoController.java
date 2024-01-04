@@ -42,9 +42,9 @@ public class JobInfoController extends BaseController{
     @ApiOperation("任务列表")
     public ReturnT<Map<String, Object>> pageList(@RequestParam(required = false, defaultValue = "0") int current,
                                         @RequestParam(required = false, defaultValue = "10") int size,
-                                        int jobGroup, int triggerStatus, String jobDesc, String glueType, Integer[] projectIds) {
+                                        int jobGroup, int triggerStatus, String jobDesc, String glueType, Integer[] projectIds,int lastHandleCode) {
 
-        return new ReturnT<>(jobService.pageList((current-1)*size, size, jobGroup, triggerStatus, jobDesc, glueType, 0, projectIds));
+        return new ReturnT<>(jobService.pageList((current-1)*size, size, jobGroup, triggerStatus, jobDesc, glueType, 0, projectIds, lastHandleCode));
     }
 
     @GetMapping("/list")
